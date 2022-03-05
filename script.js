@@ -35,6 +35,7 @@ todoButton.addEventListener("click", function(event) {
 });
 
 todoList.addEventListener("click", deleteList);
+todoList.addEventListener("click", completeList);
 
 // Function
 
@@ -44,5 +45,14 @@ function deleteList(e) {
     if (item.classList[0] === "delete-btn") {
         const todo = item.parentElement;
         todo.remove();
+    }
+}
+
+function completeList(e) {
+    const item = e.target;
+
+    if (item.classList[0] === "complete-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
     }
 }

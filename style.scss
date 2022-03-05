@@ -119,7 +119,8 @@ form button:hover {
     padding: 0rem 0.5rem;
 }
 
-.fas .fa-trash {
+.fa-trash,
+.fa-check {
     pointer-events: none;
 }
 
@@ -137,4 +138,9 @@ form button:hover {
 
 form input:focus {
     outline: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #00b894;
 }
